@@ -2,8 +2,8 @@ import boto3
 import csv
 
 s3 = boto3.resource('s3', 
-    aws_access_key_id='AKIAVGTCE2GK7E2ZKV5M', 
-    aws_secret_access_key='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' 
+    aws_access_key_id='', 
+    aws_secret_access_key='' 
 )
 
 bucket = s3.Bucket("big-bucket-business")
@@ -11,8 +11,8 @@ bucket.Acl().put(ACL = 'public-read')
 
 dyndb = boto3.resource('dynamodb', 
     region_name='us-west-2', 
-    aws_access_key_id='AKIAVGTCE2GK7E2ZKV5M', 
-    aws_secret_access_key='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' 
+    aws_access_key_id='', 
+    aws_secret_access_key='' 
 )
 
 try: 
